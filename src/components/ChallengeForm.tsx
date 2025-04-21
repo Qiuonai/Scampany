@@ -1,40 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const ChallengeForm = () => {
-  const [formData, setFormData] = useState({
-    reportId: '',
-    reason: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Challenge submitted:', formData);
-  };
-
+const ChallengeForm: React.FC = () => {
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-4">
-      <input
-        name="reportId"
-        type="text"
-        placeholder="Scam Report ID"
-        className="w-full p-3 border rounded"
-        value={formData.reportId}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="reason"
-        placeholder="Reason for challenging the report..."
-        className="w-full p-3 border rounded h-32"
-        value={formData.reason}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit" className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+    <form className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          Company Name (Being Challenged)
+        </label>
+        <input
+          type="text"
+          placeholder="e.g., Example Corp"
+          className="mt-2 block w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2 text-base text-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition duration-200"
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          Your Position / Role
+        </label>
+        <input
+          type="text"
+          placeholder="e.g., HR Manager"
+          className="mt-2 block w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2 text-base text-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition duration-200"
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          Evidence / Explanation
+        </label>
+        <textarea
+          rows={5}
+          placeholder="Explain your challenge and provide supporting info..."
+          className="mt-2 block w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2 text-base text-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-400 focus:outline-none transition duration-200"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl shadow-md transition duration-300"
+      >
         Submit Challenge
       </button>
     </form>
@@ -42,4 +47,3 @@ const ChallengeForm = () => {
 };
 
 export default ChallengeForm;
-

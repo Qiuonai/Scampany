@@ -28,5 +28,3 @@ const JobXPPage: React.FC = () => {
 export default JobXPPage;
 
 
-
-
