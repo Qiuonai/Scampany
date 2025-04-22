@@ -31,7 +31,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-          🚀 Scampany
+        Scampany
         </Link>
 
         {/* Desktop Nav */}

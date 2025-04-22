@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
           {/* Brand & About */}
           <div>
-            <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">🚀 Scampany</h2>
+            <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Scampany</h2>
             <p className="text-sm leading-relaxed">
               Empowering professionals by exposing scams and sharing real job experiences. Let's make the job market more transparent.
             </p>
