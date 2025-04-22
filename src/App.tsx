@@ -11,11 +11,12 @@ import ChallengePage from './pages/ChallengePage';
 import ContactPage from './pages/ContactPage';
 import ScamReportDetails from './pages/ScamReportDetails';
 import JobXPFormPage from './pages/JobXPFormPage';
-
+import DonationBanner from './components/DonationBanner';
 
 function App() {
   return (
     <Router>
+      <DonationBanner />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,4 +34,5 @@ function App() {
 }
 
 export default App;
+
 
