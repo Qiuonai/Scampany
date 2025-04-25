@@ -23,19 +23,18 @@ const DonationBanner = () => {
         🚀 Help us upgrade <strong>Scampany</strong> with a custom domain & new features — consider supporting us!
       </span>
       <div className="flex items-center gap-4">
-        <a
-          href="https://www.buymeacoffee.com/yourusername" // replace this
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => window.location.href = '/donate'}
           className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 transition"
         >
           Donate
-        </a>
+        </button>
         <button
           onClick={handleClose}
-          className="text-black hover:underline transition"
+          className="text-black text-lg px-2 hover:text-red-600"
+          aria-label="Close"
         >
-          Close
+          ✕
         </button>
       </div>
     </div>
@@ -43,3 +42,4 @@ const DonationBanner = () => {
 };
 
 export default DonationBanner;
+

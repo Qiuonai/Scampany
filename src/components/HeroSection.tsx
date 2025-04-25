@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 1 }}
         className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-500 via-blue-400 to-violet-600 bg-clip-text text-transparent drop-shadow-lg"
       >
-        Empower the Future.
+         Expose scams. Share your truth.
       </motion.h1>
 
       {/* Subtext */}
