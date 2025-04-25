@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { db } from "../firebase/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+// import { db } from "../firebase/firebase";
+// import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const JobXPForm = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +20,11 @@ const JobXPForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    alert("🚧 Sorry, submissions are currently paused while we work on improvements. Please check back soon!");
+    return;
 
+    // Uncomment below when you're ready to start accepting submissions again
+    /*
     if (!formData.company || !formData.position || !formData.experience || formData.rating === 0) {
       alert("Please fill in all fields and provide a rating.");
       return;
@@ -43,6 +47,7 @@ const JobXPForm = () => {
       console.error("Error submitting job experience:", error);
       alert("Something went wrong while submitting.");
     }
+    */
   };
 
   return (
@@ -107,3 +112,4 @@ const JobXPForm = () => {
 };
 
 export default JobXPForm;
+

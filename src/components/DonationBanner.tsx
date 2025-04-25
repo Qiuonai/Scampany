@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DonationBanner = () => {
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const dismissed = localStorage.getItem("scampanyBannerClosed");
@@ -24,17 +26,16 @@ const DonationBanner = () => {
       </span>
       <div className="flex items-center gap-4">
         <button
-          onClick={() => window.location.href = 'donate'}
+          onClick={() => navigate("/donate")}
           className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 transition"
         >
           Donate
         </button>
         <button
           onClick={handleClose}
-          className="text-black text-lg px-2 hover:text-red-600"
-          aria-label="Close"
+          className="text-black hover:underline transition"
         >
-          ✕
+          Close
         </button>
       </div>
     </div>
@@ -42,5 +43,8 @@ const DonationBanner = () => {
 };
 
 export default DonationBanner;
+
+
+
 
 
